@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faculty Register</title>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <script src='{% static "js/all.js"%}'></script>
+    <link rel="stylesheet" href='{% static "css/FACULTY_REGISTRATION.css" %}'>
+    <link rel="stylesheet" href='{% static "css/all.min.css" %}'>
+</head>
+<body>
+    <!--Start of Title section-->
+    <header>
+            <div id='header' class="container-fluid bg-primary">
+                <div class="row text-center text-white">
+                    <div class="col-sm-12 col-md-9 col-xs-9">
+                        <h2>Dr B R Ambedkar National Institute of Technology</h2>
+                        <h2> Jalandhar</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xs-3">
+                        <img src="{% static 'img/NITJ_Logo.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </header><br>
+        <!--End of title section-->
+        <section>
+            <div class="container border">
+                <div class="row">
+                    <div class="col text-center">
+                            <h4><u>FACULTY REGISTERATION</u></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form method="post" action="{% url 'faculty_register' %}">{% csrf_token %}
+                            {{ form.name.errors }}
+                            {{ form.name.label_tag }}
+
+                            <label for=""><h6>USERNAME:</h6></label>
+                            <input type="text" name="username" id="" class="form-control" value='{{ form.username }}'><br>
+                            <label for=""><h6>EMAIL:</h6></label>
+                            <input type="email" name="email" id="" class="form-control" value='{{ form.email }}'><br>
+                            <label for=""><h6>PASSWORD:</h6></label>
+                            <input type="password" name="password" id="" class="form-control" placeholder="ATLEAST 6 CHARACTERS"><br>
+                            <label for=""><h6>CONFIRM PASSWORD:</h6></label>
+                            <input type="password" name="password2" id="" class="form-control" placeholder="ATLEAST 6 CHARACTERS"><br>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src='{% static "js/jquery-3.3.1.min.js"%}'></script>
+    <script src='{% static "js/bootstrap.bundle.min.js"%}'></script>
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <script src='{% static "js/all.js"%}'></script>
+    <link rel="stylesheet" href='{% static "css/first.css" %}'>
+</head>
+<body>
+     <!--Start of Title section-->
+     <header>
+            <div id='header' class="container-fluid bg-primary">
+                <div class="row text-center text-white">
+                    <div class="col-sm-12 col-md-9 col-xs-9">
+                        <h2>Dr B R Ambedkar National Institute of Technology</h2>
+                            <h2> Jalandhar</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xs-3">
+                        <img src="{% static 'img/NITJ_Logo.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </header><br>
+        <!--End of title section-->
+        <!--start of nav bar-->
+        <nav>
+            <div class="container-fluid bg-primary">
+                <div class="row text-center text-white">
+                    <div class="col-2">
+                        <a href="index.html" class="text-white"><h5>PROFILE</h5></a>
+                    </div>
+                    <div class="col-2">
+                            <a href="#" class="text-white"><h5>SUBJECT PRIORITY</h5></a>
+                    </div>
+                    <div class="col-2">
+                            <a href="#" class="text-white"><h5>GRIEVENCIES</h5></a>
+                    </div>
+                    <div class="col-2">
+                            <a href="#" class="text-white"><h5>VIEW TIME TABLE</h5></a>
+                    </div>
+                    <div class="col-2">
+                            <a href="#" class="text-white"><h5>SEND NOTES</h5></a>
+                    </div>
+                    <div class="col-2">
+                            <a href="#" class="text-white"><h5>LOGOUT</h5></a>
+                    </div>
+                </div>
+            </div>
+        </nav><br>
+        <!--End of nav bar-->
+        <!--start of Entery Section-->
+        <!----><section>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h4>Enter Details</h4>
+                    </div>
+                </div>
+                <form method="post" action="{% url 'facultyinfo' %}"> {% csrf_token %}
+                        <div class="row">
+                                <div class="col">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                    <div class="input-group flex-nowrap">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text" id="addon-wrapping">ENTER YOUR NAME</span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="NAME" name="username" aria-label="Username" aria-describedby="addon-wrapping">
+                                                          </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                                <div class="col">
+                                                        <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">EMAIL AND PHONE NUMBER</span>
+                                                                </div>
+                                                                <input type="text" aria-label="email" name="email" class="form-control">
+                                                                <input type="text" aria-label="phone" name="contact" class="form-control">
+                                                              </div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="col">
+                                                        <div class="input-group mb-3">
+                                                                <div class="input-group-prepend">
+                                                                  <label class="input-group-text" for="inputGroupSelect01">BRANCH</label>
+                                                                </div>
+                                                                <select class="custom-select form-control" name="branch" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="Department of Biotechnology">Department of Biotechnology</option>
+                                                                  <option value="Department of Chemical Engineering">Department of Chemical Engineering</option>
+                                                                  <option value="Department of Civil Engineering">Department of Civil Engineering</option>
+                                                                  <option value="Department of Computer Science and Engineering">Department of Computer Science and Engineering</option>
+                                                                  <option value="Department of Electronics and Communication Engineering">Department of Electronics and Communication Engineering</option>
+                                                                  <option value="Department of Electrical Engineering">Department of Electrical Engineering</option>
+                                                                  <option value="Department of Industrial and Production Engineering">Department of Industrial and Production Engineering</option>
+                                                                  <option value="Department of Information Technology">Department of Information Technology</option>
+                                                                  <option value="Department of Instrumentation and Control Engineering">Department of Instrumentation and Control Engineering</option>
+                                                                  <option value="Department of Mechanical Engineering">Department of Mechanical Engineering</option>
+                                                                  <option value="Department of Mining Engineering">Department of Mining Engineering</option>
+                                                                  <option value="Department of Textile Engineering">Department of Textile Engineering</option>
+                                                                  <option value="Department of Chemistry">Department of Chemistry</option>
+                                                                  <option value="Department of Mathematics">Department of Mathematics</option>
+                                                                  <option value="Department of Physics">Department of Physics</option>
+                                                                </select>
+                                                              </div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row align-items-center">
+                                                <div class="col-4">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                                <div class="radio">
+                                                                        <label class="input-group-text"><input type="radio" value="ASSISTANT PROFESSOR" name="designation" checked>ASSISTANT PROFESSOR</label>
+                                                                      </div>
+                                                        </div>
+                                                        </div>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                                <div class="radio">
+                                                                        <label class="input-group-text"><input type="radio" value="ASSOCIATE PROFESSOR"  name="designation"  checked>ASSOCIATE PROFESSOR</label>
+                                                                      </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="col-4">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                                <div class="radio">
+                                                                        <label class="input-group-text"><input type="radio" value="PROFESSOR" name="designation" checked>PROFESSOR</label>
+                                                                      </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div><br>
+                                    <div class="row">
+                                            <div class="col">
+                                                    <div class="input-group flex-nowrap">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text" id="addon-wrapping">YEARS OF TEACHING</span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="YEARS OF TEACHING" name="experience" aria-label="Username" aria-describedby="addon-wrapping">
+                                                          </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col">
+                                                    <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+        </section>
+
+        <!--End of entry section-->
+
+    <script src='{% static "js/jquery-3.3.1.min.js"%}'></script>
+    <script src='{% static "js/bootstrap.bundle.min.js"%}'></script>
+</body>
+</html>

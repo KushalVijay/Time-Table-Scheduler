@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <script src='{% static "js/all.js"%}'></script>
+    <link rel="stylesheet" href='{% static "css/homepage.css" %}'>
+</head>
+<body>
+    <!--Start of Title section-->
+    <header>
+            <div id='header' class="container-fluid bg-primary">
+                <div class="row text-center text-white">
+                    <div class="col-sm-12 col-md-9 col-xs-9">
+                        <h2>Dr B R Ambedkar National Institute of Technology</h2>
+                        <h2> Jalandhar</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xs-3">
+                        <img src="{% static 'img/NITJ_Logo.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </header><br>
+        <!--End of title section-->
+        <nav>
+            <div class="container-fluid bg-primary">
+                <div class="row">
+                    <div class="col-2 text-center "><a href='{% url "login" %}' class="text-white">LOGIN</a></div>
+                    <div class="col-3 text-center"><a href='{% url "faculty_register" %}' class="text-white">REGISTER FACULTY</a></div>
+                    <div class="col-3 text-center"><a href='{% url "admin_register" %}' class="text-white">REGISTER ADMINISTRATION</a></div>
+                    <div class="col-2 text-center"><a href='{% url "time_table" %}' class="text-white">TIME TABLE</a></div>
+                    <div class="col-2 text-center"><a href="" class="text-white">GRIEVANCES</a></div>
+                </div>
+            </div>
+        </nav><br><br>
+        <section>
+            <div class="container border">
+                <div class="row">
+                    <div class="col-9 border-right border-bottom">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque quam itaque harum eligendi maiores et quas perferendis ratione dolores facilis br
+                            voluptas reprehenderit placeat aliquam, ipsam exercitationem, voluptatem distinctio, consectetur possimus sunt recusandae dolorem. 
+                            Sunt odio, voluptate ab id, maiores consequatur tenetur, officiis optio obcaecati iste fugit est impedit.<br>
+                             Labore harum nostrum quod esse ipsam ducimus deleniti commodi quasi! In voluptate aliquam labore <br>
+                            recusandae dicta eos placeat magni totam voluptatem odio nemo libero veniam vero sed velit minima nam et, vitae, necessitatibus facilis modi? <br>
+                            Necessitatibus, itaque numquam debitis neque nesciunt, repudiandae dolores in voluptate aperiam illo atque, ex incidunt officia expedita.</p>
+                        <br><br>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In itaque dicta impedit. Quas sapiente, incidunt laboriosam earum consectetur dignissimos
+                             accusamus fuga libero dolorem deserunt, ducimus cum sint 
+                            voluptatum blanditiis dolore nisi quasi, atque inventore fugit voluptates alias exercitationem odit! Necessitatibus atque accusamus quas 
+                            non maiores reprehenderit rem temporibus vero autem ab mollitia sed odio incidunt aut dignissimos, praesentium pariatur earum ea error nisi 
+                            obcaecati natus, sint modi molestias. Molestiae aut omnis amet! Id voluptatum aliquid repellat, necessitatibus provident quo dolores <br>
+                            aperiam cum quod aliquam totam asperiores nostrum quaerat cupiditate enim tenetur ipsam dolorum quos eligendi minima ducimus harum in iste.</p>
+                    </div>
+                    <div class="col-3 border-left border-bottom">
+                        <p>Lorem ipsum dolor sit amet
+                         consectetur adipisicing elit. Delectus natus ipsa sed quis debitis consectetur, pariatur perferendis corporis ratione soluta.</p>
+                    </div>
+                </div>
+            </div>
+        </section><br>
+        <footer>
+            <div class="container-fluid bg-primary text-white">
+                <div class="row">
+                    <div class="col-8 text-center">
+                        <p>ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, minima.</p> 
+                    </div>
+                    <div class="col-4 text-center">
+                            <a href="" class="text-white"><i class="fab fa-facebook-square fa-2x mx-3 my-2" width="10"></i></a>
+                            <a href="" class="text-white"><i class="fab fa-twitter-square fa-2x mx-3 my-2"></i></a>
+                            <a href="" class="text-white"><i class="fab fa-youtube-square  fa-2x mx-3 my-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
